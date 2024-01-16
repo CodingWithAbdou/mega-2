@@ -14,3 +14,18 @@ AOS.init({
 });
 
 let project = document.getElementById("project");
+
+
+
+//
+const bookBtns =  document.querySelectorAll('.booking_btn')
+
+bookBtns.forEach(btn => {
+    btn.addEventListener('mouseover' , ()=> {
+        console.log(btn.id)
+        document.querySelector(`.box-${btn.id}`).classList.add('hover')
+    })
+    btn.addEventListener('mouseout' , ()=> {
+        document.querySelector(`.box-${btn.id}`).classList.remove('hover')
+    })
+})
